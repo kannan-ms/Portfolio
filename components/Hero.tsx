@@ -57,9 +57,7 @@ export default function Hero() {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="text-lg md:text-xl text-gray-600 max-w-3xl leading-relaxed mb-6"
             >
-              Passionate about transforming data into actionable insights and building robust,
-              scalable systems. Currently exploring the intersection of data analysis and DevOps practices
-              to create efficient, data-driven solutions.
+              Passionate about transforming data into actionable insights and building solutions that create real impact. I enjoy uncovering stories hidden in numbers and presenting them in a way that drives smarter decision-making. Beyond data, I love coffee, cricket, and continuous learning — all of which fuel my curiosity and problem-solving mindset.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
