@@ -5,17 +5,17 @@ const aboutData = [
   {
     icon: User,
     title: "About Me",
-    description: "I'm a passionate individual with a strong foundation in data analysis. I love working with data to uncover insights and build solutions that make a difference.",
+    description: "I'm a passionate individual with a strong foundation in data analysis and a growing interest in DevOps practices. I love working with data to uncover insights and build solutions that make a difference.",
   },
   {
     icon: BookOpen,
     title: "Education",
-  description: "I am currently pursuing my MCA at PSG College of Technology. I'm constantly learning and expanding my skills through online courses and personal projects.",
+    description: "Currently pursuing my degree in [Your Field] with a focus on data science and computer science. I'm constantly learning and expanding my skills through online courses and personal projects.",
   },
   {
     icon: Target,
     title: "Career Goals",
-    description: "My goal is to become a well-rounded data analyst, creating efficient, scalable solutions that drive business value through data insights.",
+    description: "My goal is to become a Data Engineer, building robust data pipelines and scalable systems that empower organizations to make data-driven decisions.",
   },
 ]
 
