@@ -58,7 +58,7 @@ export default function About() {
             About Me
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Get to know me better through my background, education, and aspirations
+            Discover my journey, the skills I've built, and the ambitions that drive me forward.
           </p>
         </motion.div>
 
