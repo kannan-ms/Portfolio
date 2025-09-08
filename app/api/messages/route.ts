@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
-import clientPromise from '@/lib/mongodb';
+import getMongoClient from '@/lib/mongodb';
 
 export async function POST(req: NextRequest) {
   const { name, email, message } = await req.json();
   if (!name || !email || !message) {
     return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
   }
-  const client = await clientPromise;
+  const client = await getMongoClient();
   const db = client.db();
   const threads = db.collection('messageThreads');
 
@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
 }
 
 export async function GET() {
-  const client = await clientPromise;
+  const client = await getMongoClient();
   const db = client.db();
   const threads = db.collection('messageThreads');
   const allThreads = await threads.find({}).toArray();

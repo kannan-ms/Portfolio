@@ -10,7 +10,7 @@ const aboutData = [
   {
     icon: BookOpen,
     title: "Education",
-    description: "Currently pursuing my degree in [Your Field] with a focus on data science and computer science. I'm constantly learning and expanding my skills through online courses and personal projects.",
+  description: "Currently pursuing my MCA at PSG College of Technology with a focus on data science and computer science. I actively expand my skills through online learning and projects, aiming to turn data into actionable insights and create real-world impact.",
   },
   {
     icon: Target,

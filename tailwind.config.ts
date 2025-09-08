@@ -27,9 +27,17 @@ const config: Config = {
           "100%": { opacity: "1", transform: "translateX(0)" },
         },
       },
+      fontFamily: {
+        sans: [
+          'Inter',
+          'Segoe UI',
+          'system-ui',
+          'sans-serif',
+        ],
+      },
     },
   },
   plugins: [],
 }
 
-export default config
+export default config;
