@@ -38,69 +38,67 @@ const projects = [
 
 export default function SimpleProjects() {
   return (
-    <section id="projects" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            My Projects
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Here are some of the projects I've worked on, showcasing my skills in data analysis and web development
+    <section id="projects" className="section-shell">
+      <div className="section-inner">
+        <div className="section-heading mb-14">
+          <span className="section-kicker">Projects</span>
+          <h2 className="section-title">Selected work and experiments</h2>
+          <p className="section-copy">
+            Here are some of the projects I've worked on, showcasing my skills in data analysis and web development.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project, index) => (
             <div key={index}>
-              <Card className="h-full hover:shadow-xl transition-all duration-300 border-0 shadow-md group">
+              <Card className="surface-card group h-full border-0 shadow-none transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_-30px_rgba(15,23,42,0.35)]">
                 <CardHeader className="pb-4">
-                  {/* Project Image or Placeholder */}
-                  <div className="w-full h-48 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+                  <div className="mb-4 flex h-52 w-full items-center justify-center overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-indigo-100 via-white to-sky-100 ring-1 ring-white/80 transition-transform duration-300 group-hover:scale-[1.01]">
                     {project.image ? (
                       <img
                         src={project.image}
                         alt={project.title + ' screenshot'}
-                        className="object-cover w-full h-full"
+                        className="h-full w-full object-cover"
                       />
                     ) : (
-                      <span className="text-gray-500 text-sm font-medium">[Screenshot]</span>
+                      <span className="text-sm font-medium text-slate-500">[Screenshot]</span>
                     )}
                   </div>
-                  <CardTitle className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                  <CardTitle className="text-xl font-semibold text-slate-950 transition-colors duration-300 group-hover:text-indigo-700">
                     {project.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="leading-relaxed text-slate-600">
                     {project.description}
                   </p>
                   
                   {/* Tools Badges */}
                   <div className="flex flex-wrap gap-2">
                     {project.tools.map((tool, toolIndex) => (
-                      <Badge key={toolIndex} variant="secondary" className="text-xs">
+                      <Badge key={toolIndex} variant="secondary" className="rounded-full border border-indigo-100 bg-indigo-50/80 text-xs text-indigo-700 hover:bg-indigo-100">
                         {tool}
                       </Badge>
                     ))}
                   </div>
 
                   {/* Action Buttons */}
-                      <div className="flex gap-3 pt-2">
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex-1 border-2 border-gray-300 hover:border-blue-500 hover:text-blue-600 transition-colors duration-300 text-center py-2 px-3 rounded-md text-sm font-medium"
-                        >
-                          Code
-                        </a>
-                        <a
-                          href="/demo-unavailable"
-                          className="flex-1 bg-gradient-to-r from-gray-400 to-gray-500 text-white text-center py-2 px-3 rounded-md text-sm font-medium opacity-80 cursor-not-allowed transition-all duration-300"
-                        >
-                          Live Demo
-                        </a>
-                      </div>
+                  <div className="flex gap-3 pt-2">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition-all duration-300 hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700"
+                    >
+                      Code
+                    </a>
+                    <a
+                      href="/demo-unavailable"
+                      className="flex-1 rounded-full bg-gradient-to-r from-slate-900 to-slate-700 px-4 py-2.5 text-center text-sm font-semibold text-white transition-all duration-300 hover:from-indigo-600 hover:to-violet-600"
+                    >
+                      Live Demo
+                    </a>
+                  </div>
                 </CardContent>
               </Card>
             </div>

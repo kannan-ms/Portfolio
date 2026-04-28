@@ -3,24 +3,102 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: #f6f8fc;
+  --bg-soft: #eef3ff;
+  --surface: rgba(255, 255, 255, 0.82);
+  --surface-strong: rgba(255, 255, 255, 0.94);
+  --foreground: #0f172a;
+  --muted: #475569;
+  --border: rgba(148, 163, 184, 0.22);
+  --accent: #4f46e5;
+  --accent-strong: #1d4ed8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-sans), "Inter", sans-serif;
+  color: var(--foreground);
+  background:
+    radial-gradient(circle at top left, rgba(129, 140, 248, 0.22), transparent 28%),
+    radial-gradient(circle at top right, rgba(196, 181, 253, 0.18), transparent 24%),
+    linear-gradient(180deg, #fbfdff 0%, var(--bg) 48%, #f3f6ff 100%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display), var(--font-sans), sans-serif;
+  letter-spacing: -0.03em;
+}
+
+::selection {
+  color: #fff;
+  background: rgba(79, 70, 229, 0.9);
+}
+
+* {
+  border-color: var(--border);
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #edf2ff;
 }
 ::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
+  background: linear-gradient(180deg, #818cf8, #4f46e5);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
+  background: linear-gradient(180deg, #6366f1, #4338ca);
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+@layer components {
+  .section-shell {
+    @apply relative py-20 sm:py-24;
+  }
+
+  .section-inner {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-heading {
+    @apply mx-auto max-w-3xl text-center;
+  }
+
+  .section-kicker {
+    @apply inline-flex items-center rounded-full border border-white/70 bg-white/75 px-4 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-indigo-700 shadow-sm backdrop-blur;
+  }
+
+  .section-title {
+    @apply mt-4 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl;
+  }
+
+  .section-copy {
+    @apply mt-4 text-base leading-7 text-slate-600 sm:text-lg;
+  }
+
+  .surface-card {
+    @apply rounded-[1.75rem] border border-white/70 bg-white/80 shadow-[0_18px_60px_-30px_rgba(15,23,42,0.35)] backdrop-blur-xl;
+  }
+
+  .soft-pill {
+    @apply inline-flex items-center rounded-full border border-indigo-100 bg-indigo-50/80 px-3 py-1 text-xs font-semibold text-indigo-700;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-indigo-600 via-violet-500 to-sky-600 bg-clip-text text-transparent;
+  }
 }
 
 /* Custom animations */

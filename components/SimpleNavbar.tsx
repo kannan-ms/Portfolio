@@ -33,25 +33,25 @@ export default function SimpleNavbar() {
   }
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
       scrolled
-        ? "bg-white/95 backdrop-blur-md shadow-lg"
+        ? "border-b border-white/70 bg-white/80 shadow-[0_12px_40px_-22px_rgba(15,23,42,0.45)] backdrop-blur-xl"
         : "bg-transparent"
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="text-xl font-bold text-gray-900 hover:scale-105 transition-transform duration-200">
+        <div className="flex h-18 items-center justify-between py-4">
+          <div className="inline-flex items-center gap-3 rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-semibold tracking-[0.24em] text-slate-900 shadow-sm backdrop-blur">
+            <span className="h-2.5 w-2.5 rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500" />
             Portfolio
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center gap-2 rounded-full border border-white/60 bg-white/70 p-1.5 shadow-sm backdrop-blur">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium hover:scale-105"
+                className="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-all duration-200 hover:bg-slate-900 hover:text-white"
               >
                 {item.name}
               </button>
@@ -64,7 +64,7 @@ export default function SimpleNavbar() {
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700"
+              className="rounded-full border border-white/70 bg-white/80 text-slate-700 shadow-sm backdrop-blur hover:bg-white"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </Button>
@@ -74,13 +74,13 @@ export default function SimpleNavbar() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200">
-          <div className="px-4 py-2 space-y-2">
+        <div className="md:hidden border-t border-white/70 bg-white/90 shadow-lg backdrop-blur-xl">
+          <div className="space-y-2 px-4 py-3">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left py-3 px-4 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium"
+                className="block w-full rounded-2xl px-4 py-3 text-left font-medium text-slate-700 transition-colors duration-200 hover:bg-slate-900 hover:text-white"
               >
                 {item.name}
               </button>

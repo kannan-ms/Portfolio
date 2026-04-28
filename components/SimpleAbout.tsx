@@ -21,31 +21,30 @@ const aboutData = [
 
 export default function SimpleAbout() {
   return (
-    <section id="about" className="py-20 bg-white mb-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            About Me
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Get to know me better through my background, education, and aspirations
+    <section id="about" className="section-shell">
+      <div className="section-inner">
+        <div className="section-heading mb-14">
+          <span className="section-kicker">About</span>
+          <h2 className="section-title">A quick snapshot of who I am</h2>
+          <p className="section-copy">
+            Get to know me better through my background, education, and aspirations.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid gap-6 md:grid-cols-3">
           {aboutData.map((item, index) => (
             <div key={index}>
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
-                <CardHeader className="text-center pb-4">
-                  <div className="mx-auto w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mb-4 hover:scale-105 transition-transform duration-300">
-                    <item.icon className="w-8 h-8 text-white" />
+              <Card className="surface-card h-full border-0 shadow-none transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_-30px_rgba(15,23,42,0.35)]">
+                <CardHeader className="pb-4 text-center">
+                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-600 via-violet-600 to-sky-500 shadow-lg">
+                    <item.icon className="h-8 w-8 text-white" />
                   </div>
-                  <CardTitle className="text-xl font-semibold text-gray-900">
+                  <CardTitle className="text-xl font-semibold text-slate-950">
                     {item.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="leading-relaxed text-slate-600">
                     {item.description}
                   </p>
                 </CardContent>

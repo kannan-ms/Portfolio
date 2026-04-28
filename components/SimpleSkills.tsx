@@ -1,15 +1,14 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Code, BarChart3, Cloud, Database, Server, Zap } from "lucide-react"
+import { BarChart3, Code, Database, Server, Zap } from "lucide-react"
 
 const skillCategories = [
-  { title: "Programming Languages", icon: Code, skills: ["Python", "SQL", "Java", "JavaScript"] },
-  { title: "Data Tools", icon: BarChart3, skills: ["Excel", "Power BI", "Tableau", "Pandas"] },
-  { title: "DevOps & Cloud", icon: Cloud, skills: ["Git", "Docker", "CI/CD", "AWS"] },
-  { title: "Databases & Infra", icon: Database, skills: ["PostgreSQL", "MongoDB", "Redis", "Kubernetes"] },
-  { title: "Tools & Platforms", icon: Server, skills: ["Jupyter", "VS Code", "Linux", "Postman"] },
-  { title: "Frameworks & Libs", icon: Zap, skills: ["React", "Node.js", "Scikit-learn", "NumPy"] },
+  { title: "Languages", icon: Code, skills: ["Python", "JavaScript", "SQL"] },
+  { title: "Backend", icon: Server, skills: ["Node.js", "Express.js", "Flask", "REST API"] },
+  { title: "Frontend", icon: Zap, skills: ["React", "HTML", "CSS", "Tailwind CSS", "Bootstrap"] },
+  { title: "Databases", icon: Database, skills: ["MongoDB", "MySQL"] },
+  { title: "Developer Tools", icon: BarChart3, skills: ["Git", "GitHub", "Postman", "VS Code"] },
 ]
 
 export default function SimpleSkills() {
@@ -20,7 +19,7 @@ export default function SimpleSkills() {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Skills & Technologies</h2>
           <p className="text-xl text-gray-600">Technologies and tools I work with</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {skillCategories.map((category) => {
             const Icon = category.icon
             return (
