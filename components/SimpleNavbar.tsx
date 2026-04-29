@@ -41,7 +41,7 @@ export default function SimpleNavbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-18 items-center justify-between py-4">
           <div className="inline-flex items-center gap-3 rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-semibold tracking-[0.24em] text-slate-900 shadow-sm backdrop-blur">
-            <span className="h-2.5 w-2.5 rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500" />
+            <span className="h-2.5 w-2.5 rounded-full bg-gradient-to-r from-orange-500 to-rose-500" />
             Portfolio
           </div>
 

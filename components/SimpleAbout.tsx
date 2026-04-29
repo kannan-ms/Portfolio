@@ -36,7 +36,7 @@ export default function SimpleAbout() {
             <div key={index}>
               <Card className="surface-card h-full border-0 shadow-none transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_-30px_rgba(15,23,42,0.35)]">
                 <CardHeader className="pb-4 text-center">
-                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-600 via-violet-600 to-sky-500 shadow-lg">
+                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 via-rose-500 to-sky-500 shadow-lg">
                     <item.icon className="h-8 w-8 text-white" />
                   </div>
                   <CardTitle className="text-xl font-semibold text-slate-950">

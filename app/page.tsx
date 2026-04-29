@@ -8,11 +8,11 @@ import SimpleContact from "@/components/SimpleContact"
 export default function Home() {
   return (
     <main>
-  <SimpleHero />
-  <SimpleAbout />
-  <SimpleProjects />
-  <SimpleSkills />
-  <SimpleContact />
+      <SimpleHero />
+      <SimpleAbout />
+      <SimpleProjects />
+      <SimpleSkills />
+      <SimpleContact />
     </main>
   )
 }

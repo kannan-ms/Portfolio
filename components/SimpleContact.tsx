@@ -20,19 +20,19 @@ const socialLinks = [
     name: "Email",
     icon: Mail,
     href: "#contact",
-    color: "from-red-500 to-red-600",
+    color: "from-orange-500 to-rose-500",
   },
   {
     name: "GitHub",
     icon: Github,
     href: "https://github.com/kannan-ms",
-    color: "from-gray-700 to-gray-900",
+    color: "from-slate-800 to-slate-900",
   },
   {
     name: "LinkedIn",
     icon: Linkedin,
     href: "https://www.linkedin.com/in/kannanmayilsamy/",
-    color: "from-blue-600 to-blue-700",
+    color: "from-sky-600 to-sky-700",
   },
 ]
 
@@ -120,7 +120,7 @@ export default function SimpleContact() {
                       onChange={handleInputChange}
                       placeholder="Your full name"
                       required
-                      className="w-full rounded-2xl border-slate-200 bg-white/90 shadow-sm focus-visible:ring-2 focus-visible:ring-indigo-500"
+                      className="w-full rounded-2xl border-slate-200 bg-white/90 shadow-sm focus-visible:ring-2 focus-visible:ring-orange-400"
                     />
                   </div>
 
@@ -136,7 +136,7 @@ export default function SimpleContact() {
                       onChange={handleInputChange}
                       placeholder="your.email@example.com"
                       required
-                      className="w-full rounded-2xl border-slate-200 bg-white/90 shadow-sm focus-visible:ring-2 focus-visible:ring-indigo-500"
+                      className="w-full rounded-2xl border-slate-200 bg-white/90 shadow-sm focus-visible:ring-2 focus-visible:ring-orange-400"
                     />
                   </div>
 
@@ -152,7 +152,7 @@ export default function SimpleContact() {
                       placeholder="Tell me about your project or just say hello!"
                       required
                       rows={5}
-                      className="w-full rounded-2xl border-slate-200 bg-white/90 shadow-sm focus-visible:ring-2 focus-visible:ring-indigo-500"
+                      className="w-full rounded-2xl border-slate-200 bg-white/90 shadow-sm focus-visible:ring-2 focus-visible:ring-orange-400"
                     />
                   </div>
 
@@ -173,7 +173,7 @@ export default function SimpleContact() {
                   <Button
                     type="submit"
                     disabled={!isFormValid || formStatus === "success"}
-                    className="w-full rounded-full bg-gradient-to-r from-indigo-600 via-violet-600 to-sky-600 py-6 text-base font-semibold shadow-[0_18px_40px_-18px_rgba(79,70,229,0.8)] hover:from-indigo-700 hover:via-violet-700 hover:to-sky-700 disabled:opacity-50"
+                    className="w-full rounded-full bg-gradient-to-r from-orange-600 via-rose-500 to-sky-600 py-6 text-base font-semibold shadow-[0_18px_40px_-18px_rgba(255,106,61,0.75)] hover:from-orange-700 hover:via-rose-600 hover:to-sky-700 disabled:opacity-50"
                   >
                     <Send className="mr-2 h-4 w-4" />
                     Send Message
