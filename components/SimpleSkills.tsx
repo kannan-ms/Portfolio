@@ -5,7 +5,7 @@ import { BarChart3, Code, Database, Server, Zap } from "lucide-react"
 import type { IconType } from "react-icons"
 import {
   SiBootstrap,
-  SiCss3,
+  SiCss,
   SiExpress,
   SiFlask,
   SiGit,
@@ -20,9 +20,9 @@ import {
   SiPython,
   SiReact,
   SiTailwindcss,
-  SiVisualstudiocode,
 } from "react-icons/si"
 import { TbApi } from "react-icons/tb"
+import { VscCode } from "react-icons/vsc"
 
 const skillCategories = [
   { title: "Languages", icon: Code, skills: ["Python", "JavaScript", "SQL"] },
@@ -42,7 +42,7 @@ const skillIcons: Record<string, IconType> = {
   "REST API": TbApi,
   React: SiReact,
   HTML: SiHtml5,
-  CSS: SiCss3,
+  CSS: SiCss,
   "Tailwind CSS": SiTailwindcss,
   Bootstrap: SiBootstrap,
   MongoDB: SiMongodb,
@@ -50,7 +50,7 @@ const skillIcons: Record<string, IconType> = {
   Git: SiGit,
   GitHub: SiGithub,
   Postman: SiPostman,
-  "VS Code": SiVisualstudiocode,
+  "VS Code": VscCode,
 }
 
 export default function SimpleSkills() {
