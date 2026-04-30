@@ -10,12 +10,12 @@ const aboutData = [
   {
     icon: BookOpen,
     title: "Education",
-  description: "Currently pursuing my MCA at PSG College of Technology with a focus on data science and computer science. I actively expand my skills through online learning and projects, aiming to turn data into actionable insights and create real-world impact.",
+    description: "Completed MCA at PSG College of Technology with a focus on development and computer science. I actively expand my skills through online learning and projects, aiming to turn data into actionable insights and create real-world impact.",
   },
   {
     icon: Target,
     title: "Career Goals",
-    description: "My goal is to become a Data Engineer, building robust data pipelines and scalable systems that empower organizations to make data-driven decisions.",
+    description: "My goal is to become a Developer, building scalable applications and  systems that empower organizations.",
   },
 ]
 
@@ -27,7 +27,7 @@ export default function SimpleAbout() {
           <span className="section-kicker">About</span>
           <h2 className="section-title">A quick snapshot of who I am</h2>
           <p className="section-copy">
-            Get to know me better through my background, education, and aspirations.
+            Get to know me better through my background and aspirations.
           </p>
         </div>
 
