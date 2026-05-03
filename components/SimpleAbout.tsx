@@ -5,7 +5,7 @@ const aboutData = [
   {
     icon: User,
     title: "About Me",
-    description: "I'm a passionate individual with a strong foundation in data analysis and a growing interest in DevOps practices. I love working with data to uncover insights and build solutions that make a difference.",
+    description: "I'm a passionate individual with a strong foundation in web development  and a growing interest in DevOps practices. I love working with new technologies and build solutions that make a difference.",
   },
   {
     icon: BookOpen,
