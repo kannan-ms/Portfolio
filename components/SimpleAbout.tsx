@@ -15,7 +15,7 @@ const aboutData = [
   {
     icon: Target,
     title: "Career Goals",
-    description: "My goal is to become a Developer, building scalable applications and  systems that empower organizations.",
+    description: "My goal is to become a Web Developer, building scalable applications and  systems that empower organizations in a better way.",
   },
 ]
 
