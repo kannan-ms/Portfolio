@@ -46,7 +46,7 @@ export default function SimpleNavbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-2 rounded-full border border-white/60 bg-white/70 p-1.5 shadow-sm backdrop-blur">
+          <div className="hidden md:flex items-center gap-4 rounded-full border border-white/60 bg-white/70 p-1.5 shadow-sm backdrop-blur">
             {navItems.map((item) => (
               <button
                 key={item.name}
@@ -56,6 +56,13 @@ export default function SimpleNavbar() {
                 {item.name}
               </button>
             ))}
+            <div className="h-6 w-px bg-white/50" />
+            <button
+              onClick={() => scrollToSection("#contact")}
+              className="rounded-full bg-gradient-to-r from-orange-500 to-rose-500 px-6 py-2 text-sm font-semibold text-white transition-all duration-200 hover:from-orange-600 hover:to-rose-600 shadow-md hover:shadow-lg"
+            >
+              Get in touch
+            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -85,6 +92,12 @@ export default function SimpleNavbar() {
                 {item.name}
               </button>
             ))}
+            <button
+              onClick={() => scrollToSection("#contact")}
+              className="w-full rounded-2xl bg-gradient-to-r from-orange-500 to-rose-500 px-4 py-3 text-center font-semibold text-white transition-all duration-200 hover:from-orange-600 hover:to-rose-600 mt-2"
+            >
+              Get in touch
+            </button>
           </div>
         </div>
       )}

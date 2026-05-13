@@ -1,5 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
 import { Badge } from "./ui/badge"
+import { motion } from "framer-motion"
+import { ExternalLink, Github } from "lucide-react"
 
 const projects = [
   {
@@ -58,7 +60,13 @@ export default function SimpleProjects() {
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project, index) => (
-            <div key={index}>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true, margin: "-50px" }}
+            >
               <Card className="surface-card group relative h-full border-0 shadow-none transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_-30px_rgba(15,23,42,0.35)]">
                 <div className="pointer-events-none absolute inset-0 rounded-[1.75rem] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <div className="absolute inset-0 rounded-[1.75rem] bg-gradient-to-br from-orange-100/80 via-white/60 to-sky-100/80" />
@@ -105,20 +113,26 @@ export default function SimpleProjects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition-all duration-300 hover:border-orange-200 hover:bg-orange-50 hover:text-orange-700"
+                      className="flex-1 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition-all duration-300 hover:border-orange-200 hover:bg-orange-50 hover:text-orange-700 flex items-center justify-center gap-2"
                     >
+                      <Github className="h-4 w-4" />
                       Code
                     </a>
-                    <a
-                      href={project.live || "/demo-unavailable"}
-                      className="flex-1 rounded-full bg-gradient-to-r from-slate-900 to-slate-700 px-4 py-2.5 text-center text-sm font-semibold text-white transition-all duration-300 hover:from-orange-600 hover:to-rose-500"
-                    >
-                      Live Demo
-                    </a>
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 rounded-full bg-gradient-to-r from-slate-900 to-slate-700 px-4 py-2.5 text-center text-sm font-semibold text-white transition-all duration-300 hover:from-orange-600 hover:to-rose-500 flex items-center justify-center gap-2"
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                        Demo
+                      </a>
+                    )}
                   </div>
                 </CardContent>
               </Card>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
